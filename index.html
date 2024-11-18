@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+          sans-serif;
+        background-color: #333;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        gap: 50px;
+        padding-top: 50px;
+      }
+      .container-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 55px;
+        width: 700px;
+        border: 2px solid white;
+        border-radius: 5px;
+        padding: 50px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+      }
+      .titre-col {
+        display: flex;
+        border-bottom: 1px solid white;
+        padding-bottom: 5px;
+        justify-content: space-around;
+        width: 100%;
+      }
+      .list-col {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: space-around;
+      }
+      .livre {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+      }
+      .livre span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 10px 0px;
+      }
+      .delete {
+        position: absolute;
+        right: 20px;
+        background-color: red;
+        color: white;
+        border: 1px solid white;
+        border-radius: 500px;
+        padding: 5px;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+      }
+      .form-div {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      input[type='text'],
+      input[type='number'] {
+        background-color: #333;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+          sans-serif;
+        color: white;
+        border: 1px solid white;
+        border-radius: 5px;
+        padding: 5px;
+        line-height: 20px;
+        font-size: 1.1rem;
+        padding-left: 10px;
+        width: 350px;
+      }
+      .submit {
+        background-color: #333;
+        color: white;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+          sans-serif;
+        border: 1px solid white;
+        border-radius: 5px;
+        padding: 5px;
+        cursor: pointer;
+        width: 100px;
+        font-size: 1.1rem;
+      }
+      .submit:hover {
+        background-color: white;
+        color: #333;
+      }
+      label {
+        font-size: 1.2rem;
+      }
+      .pair {
+        background-color: #5c5c5c;
+      }
+      .alert {
+        padding: 10px 20px;
+        border-radius: 5px;
+        opacity: 0;
+        position: absolute;
+        bottom: 350px;
+      }
+      .succes{
+        background-color: green;
+      }
+      .error{
+        background-color: red;
+      }
+
+      @keyframes popAlert {
+        0% {
+          opacity: 0;
+        }
+        5% {
+          opacity: 0.5;
+        }
+        15% {
+          opacity: 1;
+        }
+        85% {
+          opacity: 1;
+        }
+        95% {
+          opacity: 0.5;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ajouter un livre</h1>
+    <form action="" id="form">
+      <div class="form-div">
+        <label for="title">Titre</label>
+        <input type="text" id="title" placeholder="Entrez le titre du livre" />
+      </div>
+      <div class="form-div">
+        <label for="author">Auteur</label>
+        <input type="text" id="author" placeholder="Entrez l'auteur du livre" />
+      </div>
+      <div class="form-div">
+        <label for="year">Année</label>
+        <input
+          type="number"
+          id="year"
+          placeholder="Entrez l'année d'édition du livre"
+        />
+      </div>
+      <button type="button" class="submit">Envoyer</button>
+      <p class="alert"></p>
+    </form>
+    <div class="container-list">
+      <div class="titre-col">
+        <span>Titre</span>
+        <span>Auteur</span>
+        <span>Année</span>
+      </div>
+      <div class="list-col"></div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
